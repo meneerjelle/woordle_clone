@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #715e78;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    flex: 1 1;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: #433448;
+    font-size: 5vh;
+}
+
+#inputField {
+    flex: 1 1;
+    text-align: center;
+    max-width: 70%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8rem;
+    border-radius: 30px;
+    border: 5px solid #3f3246;
+    margin-bottom: 2rem;
+}
+
+#button {
+    flex: 1 1;
+    min-width: 10vw;
+    background-color: #7fffd4;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3f3246;
+    border: 3px solid #3c7f69;
+    border-radius: 35px;
+    margin-bottom: 2rem;
+    
+}
+
+#button:hover {
+    cursor: pointer;
+}
+
+.output {
+    flex: 1 1;
+    width: 100vw;
+    text-align: center;
+}
+
+.output p {
+    display: inline;
+    letter-spacing: 2vw;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.output > *{
+    margin-bottom: 1rem;
+}
+
+
+
+/* POP-UP */
+
+
+.popup {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+
+  .popup-content h1 {
+    font-size: 1.5rem;
+  }
+  
+  /* Modal Content/Box */
+  .popup-content{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 80vmin;
+    background-color: #fefefe;
+    overflow: auto;
+    border-radius: 35px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+  }
+  
+  /* The Close Button */
+  .close {
+    flex: 1 1;
+    background-color: #ebb5ff;
+    border-radius: 35px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    background-color: aquamarine;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
