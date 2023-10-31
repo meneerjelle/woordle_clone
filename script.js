@@ -10,8 +10,6 @@ fetch(textFileURL)
     const random = Math.floor(Math.random() * wordsArray.length);
 
     wordChoice = wordsArray[random].split("");
-    
-    console.log(wordChoice);
   })
   .catch(error => {
     console.error('Error:', error);
