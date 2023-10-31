@@ -1,7 +1,21 @@
-const word = ["MAGIE", "RADIO", "KERST", "LAARS", "ZACHT", "HOOFD", "ZICHT", "KAARS"];
+const textFileURL = "words.txt";
+let wordsArray = [];
+let wordChoice;
 
-const random = Math.floor(Math.random() * word.length);
-const wordChoice = word[random].split("");
+fetch(textFileURL)
+  .then(response => response.text())
+  .then(data => {
+    wordsArray = data.split(/\r?\n/);
+
+    const random = Math.floor(Math.random() * wordsArray.length);
+
+    wordChoice = wordsArray[random].split("");
+    
+    console.log(wordChoice);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
 
 const validLetters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let userInput = document.querySelector("#inputField");
@@ -110,6 +124,4 @@ function checkWord() {
     }
 
 }
-
-console.log(wordChoice);
 
